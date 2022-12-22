@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortner</title>
+</head>
+
+<body>
+    <div>
+        <form id="urlForm">
+            <input type="url" placeholder="Enter URL" required id="url" />
+            <button type="submit">Shorten</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+<script>
+    const form = document.getElementById('urlForm');
+    const host = 'https://surajkm24-crispy-space-meme-4prg476p696hj4p5-8080.preview.app.github.dev'
+    form.onsubmit = async (event) => {
+        event.preventDefault();
+        let body = {
+            url: form.url.value
+        }
+        let res = await fetch(`${host}/url`, {
+            method: "POST",
+            body: JSON.stringify(body),
+            headers: { "Content-Type": "application/json" }
+        })
+
+        let data = await res.json();
+        console.log(data);
+    }
+</script>
