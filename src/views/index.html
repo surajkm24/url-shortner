@@ -7,15 +7,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL Shortner</title>
 </head>
+<style>
+    body {
+        background: rgb(40, 42, 57);
+        color: whitesmoke;
+        font-family: sans-serif;
+        ;
+    }
+
+    #formCont {
+        width: fit-content;
+        margin: auto;
+        text-align: center;
+    }
+
+    h3{
+        font-family: cursive;
+    }
+
+    h3>span {
+        background: -webkit-linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+    }
+
+    form {
+        display: flex;
+        background-color: rgb(57, 60, 73);
+        width: fit-content;
+        border-radius: 20px;
+        border: 2px solid #FF512F;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: rgb(57, 60, 73);
+        color: whitesmoke;
+        border-radius: 20px;
+        padding: 0px 20px;
+    }
+
+    .button-87 {
+        padding: 10px 30px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        border-radius: 20px;
+        border: 0px;
+        font-weight: 700;
+        box-shadow: 0px 0px 14px -7px #f09819;
+        background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-87:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .button-87:active {
+        transform: scale(0.95);
+    }
+</style>
 
 <body>
-    <div>
+    <div id="formCont">
+        <h3><span>URL </span>Shortener</h3>
         <form id="urlForm">
             <input type="url" placeholder="Enter URL" required id="url" />
-            <button type="submit">Shorten</button>
+            <button type="submit" class="button-87">Shorten</button>
         </form>
     </div>
-    <div id="link">
+    <div id=" link">
 
     </div>
 </body>
