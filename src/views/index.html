@@ -15,12 +15,16 @@
             <button type="submit">Shorten</button>
         </form>
     </div>
+    <div id="link">
+
+    </div>
 </body>
 
 </html>
 
 <script>
     const form = document.getElementById('urlForm');
+    const link = document.getElementById('link');
     const host = 'https://url-lilac.vercel.app'
     form.onsubmit = async (event) => {
         event.preventDefault();
@@ -34,6 +38,9 @@
         })
 
         let data = await res.json();
-        console.log(data);
+        let a = document.createElement('a');
+        a.href = data.url;
+        a.target = '_blank';
+        link.append(a);
     }
 </script>
