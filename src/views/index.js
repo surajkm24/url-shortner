@@ -1,5 +1,5 @@
 const form = document.getElementById('urlForm');
-const host = 'https://surajkm24-crispy-space-meme-4prg476p696hj4p5-8080.preview.app.github.dev'
+const host = process.env
 form.onsubmit = async (event) => {
     event.preventDefault();
     let body = {

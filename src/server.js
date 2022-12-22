@@ -11,7 +11,7 @@ config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 8080;
-const baseUrl = 'https://surajkm24-crispy-space-meme-4prg476p696hj4p5-8080.preview.app.github.dev';
+const baseUrl = process.env.BASE_URL;
 const EXPIRES_IN = process.env.EXPIRES_IN;
 const SECRET_KEY = process.env.SECRET_KEY;
 
