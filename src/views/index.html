@@ -21,7 +21,13 @@
         <p>YOUR URL</p>
         <button class="button-87 copy-button">COPY</button>
         <p id="linkCont">
+            \jjhadha
         </p>
+        <a target="_blank">
+            <button class="button-87 visit-button">
+                💻 VISIT SITE
+            </button>
+        </a>
     </div>
 </body>
 
@@ -30,7 +36,8 @@
 <script>
     const form = document.getElementById('urlForm');
     const link = document.getElementById('link');
-    const linkCont = document.getElementById('linkCont')
+    const linkCont = document.getElementById('linkCont');
+    const copyButton = document.querySelector('.copy-button');
     const host = 'https://url-lilac.vercel.app'
     form.onsubmit = async (event) => {
         event.preventDefault();
@@ -45,6 +52,15 @@
 
         let data = await res.json();
         link.style.display = 'block';
-        linkCont.innerText = `${data.url}`
+        linkCont.innerText = `${data.url}`;
+        document.querySelector('#link a').href = data.url;
+    }
+    copyButton.onclick = () => {
+        if (copyButton.innerText === 'COPIED') return;
+        navigator.clipboard.writeText(linkCont.innerText);
+        copyButton.innerText = 'COPIED';
+        setTimeout(() => {
+            copyButton.innerText = 'COPY';
+        }, 2000)
     }
 </script>

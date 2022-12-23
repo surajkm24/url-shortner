@@ -60,7 +60,6 @@ input {
 
 .button-87:hover {
     background-position: right center;
-    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
@@ -78,12 +77,10 @@ input {
     border-radius: 10px;
     position: relative;
     display: none;
+    text-align: center;
 }
 
 #link>p:first-child {
-     /* background: -webkit-linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
     letter-spacing: 1px; 
     color:rgb(150,164,187);
     font-size: 14px;
@@ -100,6 +97,18 @@ input {
 }
 
 #linkCont{
+    margin:20px 0px 0px;
+    color:black;
+    background-color: rgb(232,240,254);
+    border-radius: 5px;
+    padding:5px;
+    font-size: 13px;
+    font-weight: 600;
+    user-select: none;
+    text-align: left;
+}
+
+.visit-button{
+    text-align: center;
     margin:10px 0px 0px;
-    color:rgb(239,203,113);
 }
