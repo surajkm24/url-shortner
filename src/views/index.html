@@ -18,7 +18,10 @@
         </form>
     </div>
     <div id="link">
-
+        <p>YOUR URL</p>
+        <button class="button-87 copy-button">COPY</button>
+        <p id="linkCont">
+        </p>
     </div>
 </body>
 
@@ -27,6 +30,7 @@
 <script>
     const form = document.getElementById('urlForm');
     const link = document.getElementById('link');
+    const linkCont = document.getElementById('linkCont')
     const host = 'https://url-lilac.vercel.app'
     form.onsubmit = async (event) => {
         event.preventDefault();
@@ -40,10 +44,7 @@
         })
 
         let data = await res.json();
-        let a = document.createElement('a');
-        a.href = data.url;
-        a.target = '_blank';
-        a.innerText = `Shortened Url ${data.url}`
-        link.append(a);
+        link.style.display = 'block';
+        linkCont.innerText = `${data.url}`
     }
 </script>

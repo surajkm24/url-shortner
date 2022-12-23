@@ -2,7 +2,7 @@ body {
     background: rgb(40, 42, 57);
     color: whitesmoke;
     font-family: sans-serif;
-    ;
+    margin: 0px;
 }
 
 #formCont {
@@ -25,7 +25,7 @@ h3>span {
 form {
     display: flex;
     background-color: rgb(57, 60, 73);
-    width: fit-content;
+    width: 500px;
     border-radius: 20px;
     border: 2px solid #FF512F;
 }
@@ -37,6 +37,7 @@ input {
     color: whitesmoke;
     border-radius: 20px;
     padding: 0px 20px;
+    flex-grow: 1;
 }
 
 .button-87 {
@@ -66,4 +67,39 @@ input {
 
 .button-87:active {
     transform: scale(0.95);
+}
+
+#link {
+    background-color: rgb(1, 22, 39);
+    padding: 15px 20px;
+    width: 500px;
+    margin: 20px auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    display: none;
+}
+
+#link>p:first-child {
+     /* background: -webkit-linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    letter-spacing: 1px; 
+    color:rgb(150,164,187);
+    font-size: 14px;
+    font-weight: 550;
+    text-align: center;
+    margin: 0px;
+}
+
+.copy-button{
+    padding:5px 15px;
+    position: absolute;
+    top:15px;
+    right:15px;
+}
+
+#linkCont{
+    margin:10px 0px 0px;
+    color:rgb(239,203,113);
 }
