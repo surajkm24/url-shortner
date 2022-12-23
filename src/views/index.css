@@ -111,4 +111,31 @@ input {
 .visit-button{
     text-align: center;
     margin:10px 0px 0px;
+    padding:10px 20px;
+}
+
+@media all and (max-width:540px){
+    form {
+        display: flex;
+        background-color: transparent;
+        width: 95vw;
+        /* border-radius: 20px; */
+        border: none;
+        flex-direction: column;
+    }
+    input{
+        padding:10px 15px;
+        margin-bottom:10px;
+    }
+    #link{
+        width:95vw;
+        padding:15px;
+    }
+    .visit-button{
+        padding:8px 20px;
+    }
+    .copy-button{
+        padding:3px 11px;
+        font-size:12px;
+    }
 }
